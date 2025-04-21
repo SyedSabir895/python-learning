@@ -9,7 +9,7 @@ squares = [x**2 for x in range(1,11+1) if x%2!=0]
 print(squares)
 
 
-#nivens/harshd no
+#nivens/harshd no the no should be equal to 0 when it is divided by the addition of the sum of the digits of the no
 n = int(input())
 copy = n
 s = 0
@@ -23,7 +23,7 @@ else:
     print("n")
 
 
-#Strong no or krishnamurty no
+#Strong no or krishnamurty no the sum of the factorials of the digits of the no should be equal to the no 
 n = int(input())
 copy = n
 s = 0
