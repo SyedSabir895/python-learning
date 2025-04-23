@@ -75,7 +75,126 @@ print(valid)
 names = ['Vijay','Mark']
 ages = [45,69]
 pair = [(name,age) for name in names for age in ages]
-print(pair)"""
+print(pair)
+
+#given a string, create a list of all vowels in the string using list comprehension
+text = "hello students"
+v = [char for char in text if char.lower() in 'aeiou']
+print(v)
+
+
+#matrix
+size = int(input())
+for i in range(size):
+    for j in range(size):
+        if i==j or j==0 or i==size-1:
+            print('^',end=" ")
+        else:
+            print(' ',end=" ")
+    print()
+
+
+
+#floyd traingle
+rows = 5
+num = 1
+for i in range(1,rows+1):
+    for j in range(1,i+1):
+        print(num,end=" ")
+        num+=1
+    print()
+
+
+
+rows = 5
+for i in range(rows):
+    for j in range(rows-i-1):
+        print(" ",end=" ")
+    for k in range(2*i +1):
+        print("!",end=' ')
+    print()
+
+
+#pascal's triangle
+rows  =5
+num = 1
+for i in range(rows):
+    num=1
+    for j in range(rows-i-1):
+        print(" ",end=' ')
+    for k in range(i+1):
+        print(num,end=' ')
+        num = num*(i-k)//(k+1)
+    print()
+
+
+
+
+
+alpha = [chr(i) for i in range (ord('a'),ord('z')+1)]
+alpha.sort()
+print(" ".join(alpha))
+
+#spiral pattern
+
+n=4
+matrix= [[0] *n for _ in range(n)]
+num=1
+top= 0
+bottom= n-1
+left= 0
+right= n-1
+while top<=bottom and left <=right:
+    for i in range(left, right+1):
+        matrix[top][i]= num
+        num+=1
+    top +=1
+    for i in range(top, bottom+1):
+        matrix[i][right]= num
+        num+=1
+    right -=1
+    for i in range( right, left-1, -1):
+        matrix[bottom][i]= num
+        num+=1
+    bottom -=1
+    for i in range(bottom, top-1, -1):
+        matrix[i][left]= num
+        num+=1
+    left +=1
+for row in matrix:
+    for val in row:
+        print(f"{val:2}", end=' ')
+    print()"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
