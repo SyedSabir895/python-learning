@@ -164,7 +164,67 @@ while top<=bottom and left <=right:
 for row in matrix:
     for val in row:
         print(f"{val:2}", end=' ')
-    print()"""
+    print()
+
+#function with default parameters
+
+def sample(x,y=1):
+    return x*y
+print(sample(2))
+print(sample(2,3))
+
+
+
+#function with keyword arguments
+def result(*args):
+    return sum(args)
+print(result(1,2,3))
+print(result(11,22,33,44))
+
+
+def info(**kwargs):
+
+    for key,value in kwargs.items():
+        print(f"{key} : {value}")
+info(name="Sabir",age=69,city="Vijayawada")
+
+
+#lambda func
+sq = lambda x:x*x
+print(sq(5))
+add = lambda x,y: x+y
+print(add(3,6))
+
+
+def allnum(n):
+    return min(n),max(n), sum(n)/len(n)
+min_val,max_val,avg = allnum([1,2,3,4,5])
+print(f"Min: {min_val},Max:{max_val},Avg:{avg}")
+
+
+def e(n):
+    if n==0:
+        return True
+    return o(n-1)
+
+def o(n):
+    if n==0:
+        return False
+    return e(n-1)
+print(e(4))"""
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
