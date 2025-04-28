@@ -211,7 +211,19 @@ def o(n):
     if n==0:
         return False
     return e(n-1)
-print(e(4))"""
+print(e(4))
+
+
+#power tower of hanoi
+
+def pt(a,n):
+    if n==1:
+        return a
+    return a**pt(a,n-1)
+
+
+print(pt(2,2))
+print(pt(3,3))"""
 
 
 
