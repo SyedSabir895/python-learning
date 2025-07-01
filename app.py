@@ -223,7 +223,123 @@ def pt(a,n):
 
 
 print(pt(2,2))
-print(pt(3,3))"""
+print(pt(3,3))
+
+#python data structures array opreations
+#program to construct a list arr=[10,20,30,40] and perform insert operation and division opertion with 50 and 25 at position 2 respectively delete 30 and traverse the array to fetch a number 25 is present or not.
+
+arr = [10,20,30,40]
+#insert
+arr.append(50)   #adds at the last of the array 
+arr.insert(2, 25)
+for i in arr:
+    print(i,end=" ")
+
+#deletion
+arr.remove(30)
+arr.pop()   # removes te last element of the array
+print(arr)
+
+#traversal   will print all the elements which are in the array
+
+for i in arr:
+    print(i,end=" ")
+
+#searching
+print("\n 25 in array? ",25 in arr)
+
+
+#program to check whether the given string is palindrome or not and count the palindromic characters which are repeated
+text = 'madam'
+if text == text[::-1]:
+    print("True")
+else:
+    print("False")
+ 
+
+freq = {}
+for ch in text:
+    freq[ch] = freq.get(ch,0)+1
+print(freq)
+
+
+#searchings
+linear search : in sorted or unsorted arrays
+1.arr of list of size n
+2.key for search element
+3.start with zero index
+4.compare arr[i] == key
+arr[i] = key return index
+else not(move to next index)
+5.repeat same steps till n-1
+6.if no match return -1
+
+
+binary search 
+sentinel search
+fibonaci search
+interpolation search
+
+
+
+
+def linear_search(arr,key):
+    for i in range(len(arr)):
+        if arr[i]==key:
+            return i
+    return -1
+size = int(input("Enter the size: "))
+arr = []
+print("Enter the elements: ")
+for i in range(size):
+    num = int(input(f"Element {i+1}:"))
+    arr.append(num)
+key = int(input("Enter the key: "))
+result = linear_search(arr,key)
+if result != -1:
+    print(f"\n element {key} found at {result}")
+else:
+    print("element not found")
+
+
+
+
+#binary search:
+1.array must be sorted
+2.array is divided into two seperate equivalent halfs
+set low & high 0->-1
+condition low<=high
+mid = low+high//2
+arr[mid] == key return mid
+arr[mid] <key low mid+1
+arr[mid] > key high mid+1
+not found return -1
+
+def binary_search(arr,key):
+    low = 0
+    high = len(arr)-1
+    while low<=high:
+        mid = (low+high)//2
+        if arr[mid] == key:
+            return mid
+        elif arr[mid]<key:
+            low = mid+1
+        else:
+            high = mid - 1
+    return -1
+
+size = int(input("Enter the size"))
+arr = []
+print("Enter the elements: ")
+for i in range(size):
+    num = int(input(f"Element {i+1}:"))
+    arr.append(num)
+key = int(input("Enter the key: "))
+result = binary_search(arr,key)
+if result != -1:
+    print(f"\n element {key} found at {result}")
+else:
+    print("element not found")"""
 
 
 
